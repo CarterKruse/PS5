@@ -1,2 +1,2 @@
 # PS5
-Viterbi Algorithm
+ViterbiAlgorithm Algorithm
