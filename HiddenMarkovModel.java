@@ -21,6 +21,9 @@ public class HiddenMarkovModel
 {
     /* Though we think of the model as a graph, we do not need to use the Graph class. Instead, we keep (nested) Maps of
     transition and observation probabilities.
+
+    The transitionMap keySet is the part of speech (origin), the keySet of the inner map is the part of speech (transition).
+    The observationMap keySet is the part of speech, the keySet of the inner map is the word.
      */
     private Map<String, Map<String, Double>> transitionMap;
     private Map<String, Map<String, Double>> observationMap;

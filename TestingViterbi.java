@@ -50,7 +50,7 @@ public class TestingViterbi
         // List<String> hardCodedTestTags = Arrays.asList("DET", "ADJ", "ADJ", "N", "V", "P", "DET", "ADJ", "N", ".");
 
         // List<String> hardCodedTestSentence = Arrays.asList("CS", "is", "an", "enjoyable", "course", ".");
-        // List<String> hardCodedTestTags = Arrays.asList("PRO", "V", "DET", "ADJ", "N", ".");
+        // List<String> hardCodedTestTags = Arrays.asList("NP", "V", "DET", "ADJ", "N", ".");
 
         // List<String> hardCodedTestSentence = Arrays.asList("My", "name", "is", "Carter", "Kruse", ".");
         // List<String> hardCodedTestTags = Arrays.asList("DET", "N", "V", "NP", "VP", ".");

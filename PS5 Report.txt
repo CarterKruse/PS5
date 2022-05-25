@@ -12,15 +12,15 @@ My name is Carter Kruse.
 John walked the dog through the neighborhood.
 [PRO, VD, DET, N, P, DET, N, .]
 
-Correct Tagging
 CS is an enjoyable course.
 [PRO, V, DET, ADJ, N, .]
 
+Correct Tagging
 The purpose of our lives is to be happy.
 [DET, N, P, PRO, N, V, TO, V, ADJ, .]
 
 Discussion: The Viterbi Algorithm, based on the Hidden Markov Model, is effective when the sentences being tagged are
-similar in structure and content to the training data. In this case, the training data is the Brown corpus, rather
+similar in structure and content to the training data. In this case, the training data is the Brown corpus, a rather
 comprehensive dataset that allows for relatively high accuracy in most cases.
 
 In the cases where incorrect tagging was identified, the tagging was typically only off by a single tag or two. For example,
