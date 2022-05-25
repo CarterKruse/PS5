@@ -5,11 +5,11 @@ import java.util.*;
  * To accomplish POS tagging, we will use a hidden Markov model. In an HMM, the states are things we do not see and are
  * trying to infer, and the observations are what we do see. Thus, the observations are words in a sentence and the states
  * are tags because the text we will observe is not annotated with its part of speech tag.
- *
+ * <p>
  * We will proceed through a model by moving from state to state, producing one observation per state. In this "bigram"
  * model, each tag depends on the previous tag. Then each word depends on the tag. We let "#" be the tag before the start
  * of the sentence.
- *
+ * <p>
  * An HMM is defined by its states (here parts of speech tags), transitions (here tag to tag, with weights), and observations
  * (here tag to word, with weights). Probabilities are computed for the tags: for each tag, the frequencies of the transitions
  * out are divided by the total number of transitions out, and the frequencies of the words it tags are divided by the total
