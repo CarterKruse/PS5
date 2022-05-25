@@ -8,11 +8,11 @@ import java.util.Scanner;
  * Testing Viterbi
  * To assess how good a model is, we can compute how many tags it gets right and how many it gets wrong on some test
  * sentences.
- *
+ * <p>
  * The test files use contain sets, one pair with the sentences and a corresponding one with the tags to be used for
  * training, and another pair with the sentences and tags for testing. Each line is a single sentence (or a headline),
  * cleanly separated by whitespace into words/tokens, with punctuation also thus separated out.
- *
+ * <p>
  * We use the train sentences and train tags files to generate the HMM, and then apply it to each line in the test
  * sentences file, comparing the results to the corresponding test tags line. We count the number of correct vs. incorrect
  * tag.
@@ -75,7 +75,7 @@ public class TestingViterbi
      * lines with sentences and tags).
      *
      * @param observations The List of sentences (containing a List of Strings) of the words from a given input.
-     * @param testTags The List tag groups (containing a List of Strings) of the tags from a given input.
+     * @param testTags     The List tag groups (containing a List of Strings) of the tags from a given input.
      */
     public static void testFromFiles(List<List<String>> observations, List<List<String>> testTags)
     {

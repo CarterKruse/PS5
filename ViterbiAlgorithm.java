@@ -9,7 +9,7 @@ import java.util.Map;
  * observation i, it propagates from each reached state at observation i-1, following each transition. The score for
  * the next state through observation i is the sum of the score at the current state through i-1 plus the transition
  * score from current to next plus the score of observation i in next.
- *
+ * <p>
  * We are not going to force a "stop" state (ending with a period, question mark, or exclamation point) since the Brown
  * corpus includes headlines that break that rule.
  *
@@ -29,7 +29,7 @@ public class ViterbiAlgorithm
      * Uses the HiddenMarkovModel class to train the model.
      *
      * @param trainSentencesFile The file path for the training sentences.
-     * @param trainTagsFile The file path for the training tags.
+     * @param trainTagsFile      The file path for the training tags.
      */
     public static void trainModel(String trainSentencesFile, String trainTagsFile)
     {
@@ -63,7 +63,7 @@ public class ViterbiAlgorithm
      * Tag Sentence
      * A part of speech (POS) tagger labels each word in a sentence with its part of speech (noun, verb, etc.). The goal
      * of POS tagging is to take a sequence of words and produce the corresponding sequence of tags.
-     *
+     * <p>
      * We only need to keep the current and next scores, which simplifies the representation we use in code.
      *
      * @param sentence The sentence to tag with parts of speech.
@@ -119,7 +119,7 @@ public class ViterbiAlgorithm
                  */
 
                 // Cycling through each nextState in the List of nextStates, according to the transitionMap.
-                for (String nextState: transitionMap.get(currentState).keySet())
+                for (String nextState : transitionMap.get(currentState).keySet())
                 {
                     // Scoring the next state/observation according to the current score and transition score.
                     double nextScore = currentScores.get(currentState) + transitionMap.get(currentState).get(nextState);
@@ -128,7 +128,7 @@ public class ViterbiAlgorithm
                     if (!observationMap.get(nextState).containsKey(word))
                         nextScore += unseenPenalty;
 
-                    // Otherwise, we simply add on the observation score, given from the observationMap.
+                        // Otherwise, we simply add on the observation score, given from the observationMap.
                     else
                         nextScore += observationMap.get(nextState).get(word);
 
@@ -197,7 +197,7 @@ public class ViterbiAlgorithm
      * observation, working back to the start state.
      *
      * @param backTrackList The List of Maps containing the appropriate transitions from state to state.
-     * @param lastState The lastState to work backward from.
+     * @param lastState     The lastState to work backward from.
      */
     public static List<String> findPath(List<Map<String, String>> backTrackList, String lastState)
     {
